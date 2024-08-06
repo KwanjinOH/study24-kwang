@@ -1,0 +1,123 @@
+.side{position: fixed; width: 320px; height: calc(100% - 60px); background-color: #F1F5FC; font-size: 14px; color: #777; box-shadow: -6px 0px 5px -5px rgb(77 77 77 / 20%); }
+.side.parent{display:none; right: 0; z-index: 9}
+.side.child{right: -320px;  z-index: 9; transition: right .3s;}
+.side.on{display: block; right: 0; transition: right .3s;}
+.side .my{display: block; padding: 18px; background-color: #fff; margin-bottom: 4px; }
+.side .my:last-child{border-bottom: 1px solid #ececec}
+.side .my .my-profile{display: flex; flex-direction: column;}
+.side .my .my-profile li{display: flex; height: 30px; align-items: center;}
+.side .my .my-profile li.membership{color: #000}
+
+.side .my .my-grade{margin-top: 10px; display: flex; justify-content: center; width: 100%; height: 36px; align-items: center; border: 1px solid #ffcb3a; color: #ffcb3a; background-color: #fff; border-radius: 4px; font-size: 14px; cursor: pointer;}
+.side .my.list {padding-top: 0; padding-bottom: 0; font-size: 14px }
+.side .my.list .my-btns a:not(.nt){cursor: pointer}
+.side .my.list .my-btns a li{display: flex; align-items: center; height: 50px; color: #000; border-bottom: 1px solid #ececec}
+
+.side .my.list .my-btns a:last-child li{border:0; color: #bbb}
+.side .my.list .my-btns a.ir label {display: flex; margin-left: 10px; width: 20px; height: 20px; align-items: center; justify-content: center; border-radius: 50%; background-color: #ffcb3a; font-size: 10px; color: #fff; cursor: pointer}
+.side .my.list .my-btns a.nt li{justify-content: space-between;}
+.side .my.list .my-btns a.nt li .mk-toggle{position: relative; width: 57px; height: 30px;}
+.side .my.list .my-btns a.nt li .mk-toggle input{position: absolute; opacity: 0; right: -9999px}
+.side .my.list .my-btns a.nt li .mk-toggle .slider{position: absolute; cursor: pointer; width: 100%; top: 0; left: 0; bottom: 0; background-color: #ececec;}
+.side .my.list .my-btns a.nt li .mk-toggle .slider:before {position: absolute; content: ""; height: 24px; width: 24px; left: 4px; bottom: 3px; background-color: #fff; box-shadow: 0 0 4px 0 rgb(77,77,77,.5); -webkit-transition: .4s; transition: .4s;}
+.side .my.list .my-btns a.nt li .mk-toggle input:checked + .slider {background-color: #ffcb3a;}
+
+.side .my.list .my-btns a.nt li .mk-toggle input:checked + .slider:before { -webkit-transform: translateX(26px); -ms-transform: translateX(26px); transform: translateX(26px);}
+.side .my.list .my-btns a.nt li .mk-toggle .slider.round { border-radius: 34px; }
+.side .my.list .my-btns a.nt li .mk-toggle .slider.round:before { border-radius: 50%; }
+
+.side .ver-info{position: absolute; bottom: 10px; right: 10px; font-size: 10px}
+
+.side .side-warp{position: relative;  background-color: #F1F5FC}
+.side .side-warp .empty{display: none}
+.side .side-warp .empty.on{display: block; padding: 10px; width: 100%; text-align: center; font-size: 12px}
+
+.side .child-title{display: flex; margin-bottom: 4px; height: 60px; justify-content: center; align-items: center; font-size: 15px; font-weight: 500; color: #000; background-color: #fff; box-shadow: 4px -2px 4px 0px rgba(77, 77, 77, .5);}
+.side .child-title i{position: absolute; left: 0; padding: 20px; font-size: 20px; cursor: pointer;}
+
+/* 나의 관심 목록 list */
+
+/* temp 비교분석 완성되기 전까지 */
+.side .ir-lists{height: calc(100% - 72px); overflow-y: auto;}
+/* .side .ir-lists{height: calc(100% - 124px); overflow-y: auto;} */
+/* temp 비교분석 완성되기 전까지 */
+
+.side .ir-lists::-webkit-scrollbar {width: 0;height: 0;}
+.side .ir-list{position: relative; margin-bottom: 4px; padding: 10px; background-color: #fff}
+
+/* .side .ir-list.pic .f{box-shadow: 0 0 2px 2px #3182f7} */
+/* first - csss 0428
+.side .ir-list .f .ir-cont{display: flex}
+.side .ir-list .f .ir-cont img{width: 140px; height: 120px; object-fit: cover;}
+.side .ir-list .f .ir-cont .lf{position: relative; width: 160px}
+.side .ir-list .f .ir-cont .lf.c{width: 100%}
+.side .ir-list .f .ir-cont .lf .reg-date{position: absolute; top: 0; right: 60px; font-size: 10px; color: #bbb;}
+.side .ir-list .f .ir-cont .lf .del-btn{display: flex; justify-content: end;}
+.side .ir-list .f .ir-cont .lf .del-btn a{display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; cursor: pointer}
+.side .ir-list .f .ir-cont .lf .del-btn a i{padding: 5px; font-size: 20px; color: #000}
+.side .ir-list .f .ir-cont .lf ul{display: flex; flex-wrap: wrap; justify-content: center; font-size: 12px}
+.side .ir-list .f .ir-cont .lf ul li{margin: 0 4px 4px 4px; padding: 4px; width: 60px; border: 1px solid #777; text-align: center; color: #777; border-radius: 4px;}
+.side .ir-list .f .ir-cont .lf ul li.hir{border: 1px solid #fbb900; color: #fbb900}
+
+.side .ir-list .f .info{margin-top: 4px}
+
+.side .ir-list .f .info span{display: block; color: #000}
+.side .ir-list .f .info a{color: #3182f7; border-bottom: 1px solid #3182f7}
+.side .ir-list .f .info .memo{margin-top: 4px; display: flex; flex-direction: column}
+
+.side .ir-list .f .info .memo textarea{display: block; padding: 5px 0; max-height: 34px; min-height: 34px; border: 0; resize: none; overflow: hidden; font-size: 13px; background-color: #fff}
+.side .ir-list .f .info .memo textarea.txt-hide {display: none}
+.side .ir-list .f .info .memo button{margin-top: 4px; width: 100%; height: 30px; color: #bbb; cursor: pointer;}
+.side .ir-list .f .info .memo button.on{background-color: #fbb900; color: #fff}
+.side .ir-list .f .info .memo button:hover{color: #fbb900}
+.side .ir-list .f .info .memo button.on:hover{background-color: #fff; border: 1px solid #fbb900}
+*/
+.ir-list .s-bage{position: absolute; top: 0; left: 0; width: 0; height: 0; border-bottom: 30px solid #fbb900; border-top: 30px solid transparent; border-left: 30px solid #fbb900; border-right: 30px solid transparent; transform: rotate(90deg); opacity: .8}
+.ir-list .s-bage span{position: relative; width: 50px; display: inline-block; transform: rotate(-135deg); top: -2px; left: -40px; font-size: 12px; color: #fff;}
+.ir-list .s-hd{display: flex; position: relative; justify-content: end; align-items: center;}
+.ir-list .s-hd .reg-date{width: 100%; font-size: 10px; position: absolute; text-align: center}
+
+.ir-list .s-hd .del-btn{display: flex; z-index: 2;}
+.ir-list .s-hd .del-btn a{display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; cursor: pointer }
+.ir-list .s-hd .del-btn a i{padding: 5px; font-size: 20px; color: #000}
+.ir-list .s-ig {display: flex; justify-content: center;}
+.ir-list .s-ig img{object-fit: cover; width: 160px; height: 150px;}
+.ir-list .s-info .s-addr{display: flex; align-items: center; height: 30px}
+.ir-list .s-info .s-addr a{color: #000; cursor: pointer}
+.ir-list .s-info .s-addr a:hover{color: #3182f7}
+.ir-list .s-info .s-price{display: flex; align-items: center; margin-bottom: 4px}
+.ir-list .s-info .s-price span{color: #000}
+.ir-list .s-info .s-etc{display: flex; align-items: center; margin-bottom: 6px}
+.ir-list .s-info .s-etc li{padding: 2px 4px; margin-right: 4px; border: 1px solid #bbb; border-radius: 8px; font-size: 12px}
+.ir-list .s-info .s-etc li:last-child{margin-right: 0;}
+
+.ir-list .s-info .memo{margin-top: 4px; display: flex; flex-direction: column}
+
+.ir-list .s-info .memo textarea{display: block; padding: 5px 0; max-height: 34px; min-height: 34px; border: 0; resize: none; overflow: hidden; font-size: 13px; background-color: #fff}
+.ir-list .s-info .memo textarea.txt-hide {display: none}
+.ir-list .s-info .memo button{margin-top: 4px; width: 100%; height: 30px; color: #bbb; cursor: pointer;}
+.ir-list .s-info .memo button.on{background-color: #fbb900; color: #fff}
+.ir-list .s-info .memo button:hover{color: #fbb900}
+.ir-list .s-info .memo button.on:hover{background-color: #fff; border: 1px solid #fbb900}
+
+
+/* 나의 정보 수정 */
+.side .mm-warp{position: relative; padding: 20px; height: calc(100% - 164px); background-color: #fff}
+.mm-warp .mm-category{display: flex; flex-direction: column; margin-bottom: 10px}
+.mm-warp .mm-category .mm-sbj{font-size: 15px; font-weight: 500; color: #777}
+.mm-warp .mm-category span{display: flex; align-items: center; height: 30px; color: #000}
+.mm-warp .mm-category .mm-ip{display: flex; justify-content: right; text-indent: 0; border: 0; border-radius: 0; border-bottom: 1px solid #ececec; font-size: 14px; color: #000; text-align: right; cursor:pointer}
+.mm-warp .mm-category .mm-ip:focus{border-bottom: 1px solid #3182f7}
+
+.mm-warp .mm-category .mm-coce .chk-coce{position: relative; display: flex; align-items: center; cursor:pointer}
+.mm-warp .mm-category .mm-coce input[type="checkbox"]{position: absolute; right: -9999px; opacity: 0;}
+
+.mm-warp .mm-category .mm-coce .chk-coce:before{content: ""; margin-right: 10px; width: 16px; height: 16px; border: 1px solid #bbb; border-radius: 4px;}
+.mm-warp .mm-category .mm-coce .chk-coce:after{content: ""; position: absolute; left: 1px; top: 6px; width: 16px; height: 16px; background: url(/img/web/check.png) no-repeat center; background-size: 16px auto;}
+.mm-warp .mm-category .mm-coce input:checked+.chk-coce:before{background-color: #3182f7; border-color: #3182f7;}
+
+.side .footer-btns{position: absolute; display: flex; bottom: 0; width: 100%; height: 60px; background-color: #3182f7; font-size: 15px;}
+.side .footer-btns a{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;; color: #fff}
+
+
+

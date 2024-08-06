@@ -1,0 +1,170 @@
+/* layer login css */
+.layer{position: absolute; top: 0; left: 0; display: block}
+.layer .blur{position: fixed; width: 100%; height: 100%; background-color: #000; opacity: .5; z-index: 10;}
+.layer .layer-content{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 11;}
+.layer .layer-content .content-warp{padding: 40px; width: 320px; height: auto; background-color: #fff; box-shadow: 0 0 4px 0 rgb(77 77 77 / 50%); border-radius: 10px;}
+.layer .layer-content .header{text-align: center; color: #000}
+.layer .layer-content .header .subject{font-size: 20px}
+.layer .layer-content .header .close{position: absolute; top: 12px; right: 12px;  width: 32px; height: 32px; background-color: transparent; cursor: pointer;}
+.layer .layer-content .header .close i{font-size: 24px; color: #000}
+.layer .layer-content .content{font-size: 14px}
+.layer .layer-content .content .login{margin-top: 40px}
+.layer .layer-content .content .login.direct .unit-warp{margin-top: 14px}
+.layer .layer-content .content .login.direct .box-area input{margin-top: 10px; height: 40px; font-size: 14px}
+.layer .layer-content .content .login.direct .box-area input:focus{border: 1px solid #fbb900}
+.layer .layer-content .content .login.direct .etc{display: flex; align-items: center; justify-content: space-between; height: 40px; font-size: 12px; color: #000}
+.layer .layer-content .content .login.direct .etc input{position: absolute; left: -1000%}
+.layer .layer-content .content .login.direct .etc input + label{position: relative; display: flex; cursor: pointer}
+.layer .layer-content .content .login.direct .etc input + label:before{content:""; position: relative; top: 1px; display: inline-block; margin: 0 4px 0 0; width: 12px; height: 12px; border: 1px solid #bbb; border-radius: 3px; transition: all .2s;}
+.layer .layer-content .content .login.direct .etc input:checked + label:before{ background-color: #fbb900; border-color: #fbb900}
+.layer .layer-content .content .login.direct .etc input + label:after{content:""; position: absolute; left: 0; top: 0; background: url(/img/web/check.png) no-repeat center; width: 14px; height: 14px; background-size: 0 auto; transition: all .1s .2s;}
+.layer .layer-content .content .login.direct .etc input:checked + label:after{background-size: 12px auto;}
+.layer .layer-content .content .login.direct .etc .find{display: flex; border-bottom: 1px solid #fbb900; color:#777}
+.layer .layer-content .content .login.direct .sign-up{display: flex; justify-content: end}
+.layer .layer-content .content .login.direct .sign-up a{color: #3182f7}
+
+.layer .layer-content .content hr{display: block; margin: 10px 0; border: 0; height: 1px; background: linear-gradient(to right, rgba(0,0,0,0), #fbb900, rgba(0,0,0,0))}
+
+.layer .layer-content .content .login.direct .btn button{border: 0; width: 100%; height: 40px; background-color: #fbb900; color: #fff; font-size: 14px; cursor: pointer;}
+.layer .layer-content .content .social{margin-top: 10px}
+.layer .layer-content .content .social .social-comment{text-align: center; font-size: 10px}
+.layer .layer-content .content .social .social-btns{display: flex; justify-content: center; margin-top: 10px}
+.layer .layer-content .content .social .social-btns .ic.naver{margin-right: 10px; background: url(/img/web/naver_ico.png) no-repeat center / cover; width: 50px; height: 50px}
+.layer .layer-content .content .social .social-btns .ic.kakao{width: 50px; height: 50px; border-radius: 25px; background: url(/img/web/kakao_simbol.svg) no-repeat #fee500 center / 58%}
+
+.layer .alert .layer-msg{margin-top: 40px; font-size: 18px; color: #000; line-height: 28px}
+.layer .alert .layer-msg .str{color: #ed4545}
+.layer .alert .inquiry{margin-top: 20px; text-align: right}
+.layer .alert button{margin-top: 40px; font-size: 14px; height: 40px; width: 100%; cursor: pointer}
+/* .layer .alert .today-again-btn{margin-top: 40px; font-size: 14px; height: 40px; width: 100%; cursor: pointer} */
+
+.report-container{position: fixed; /* display: none; */ width: 893px; height: 100%; left: 50%; top: 0; transform: translate(-50%, 0); overflow-y: auto; background-color: #F1F5FC; z-index: 10;}
+
+.report-container .hide{display: none !important}
+.report-container .empty{color: #bbb !important}
+
+.report-container::-webkit-scrollbar{width: 10px}
+.report-container::-webkit-scrollbar-thumb{width: 6px; background-color: #bbb; background-clip: padding-box; border: 3px solid transparent; border-radius: 5px}
+.report-container::-webkit-scrollbar-track{background-color:#ececec}
+.report-container .header{height: 60px; position: sticky; top: 0; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; background-color: #fff; box-shadow: 0 0 6px -2px rgba(77, 77, 77, .5); z-index: 10}
+.report-container .header .report-functions{display: flex; margin-right: 40px; height: 100%; font-size: 24px; color: #000}
+.report-container .header .report-functions ul{display: flex; flex-direction: row; align-items: center;}
+.report-container .header .report-functions ul li{display: flex; width: 60px; justify-content: center; cursor: pointer;}
+.report-container .header .report-functions ul li:hover{color: #fbb900}
+.report-container .header .close{width: 50px; height: 100%; margin-right: 20px; background-color: transparent; font-size: 20px; align-items: center; display: flex; justify-content: center; color: #000; cursor: pointer;}
+
+.report-container .report-babge{position: absolute; z-index: 2; width: 0; height: 0; border-bottom: 40px solid #fbb900; border-top: 40px solid transparent; border-left: 40px solid #fbb900; border-right: 40px solid transparent; transform: rotate(90deg); opacity: .8;}
+.report-container .report-babge .b-name{position: relative; transform: rotate(-135deg); color: #fff; z-index: 3; width: 50px; top: 6px; left: -40px; font-size: 16px; font-weight: 600; letter-spacing: 1px; text-align: center}
+
+.report-container .f-warp{padding: 6px; margin-bottom: 6px; background-color: #fff}
+.report-container .example.f-warp{box-shadow: 0 2px 2px -2px rgb(77 77 77 / 50%)}
+/* .report-container .summary{padding: 6px; margin-bottom: 6px; background-color: #fff} */
+.report-container .top-map{display: flex; margin: 4px 0 20px 0}
+.report-container .top-map .report-m{width: 50%; height: 364px}
+.report-container .top-map .report-m .roadview{width: 100%; height: 100%;}
+.report-container .top-map .report-m.ro #add-img{position: absolute; right: 50%; margin: 10px 10px 0 0; display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background-color: #ececec; border-radius: 25px; opacity: 0.5; cursor: pointer; font-size: 32px; z-index: 2;}
+.report-container .top-map .report-m.ro #add-img:hover{color: #fbb900; opacity: 1;}
+.report-container .top-map .report-m.ro .roadDot{ display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 12%; background-color: #fbb900; opacity: 0;}
+.report-container .top-map .report-m.ro .roadDot i{font-size: 20px; color: #fff}
+.report-container .info{display: flex; margin-bottom: 20px; color: #000}
+.report-container .info .s{width: 50%; display: flex; flex-direction: column;}
+.report-container .info .s .addr-container{display: flex; font-size: 16px; flex-direction: column;  padding-bottom: 12px;}
+.report-container .info .s .addr-container .bd{display: flex; font-size:20px; font-weight: 500; align-items: center;}
+.report-container .info .s .addr-container .bd:before{font-family: "Font Awesome 6 Free"; padding: 0 10px; content: "\f1ad"; font-weight: 900; font-size: 16px}
+/* .report-container .info .s .addr-container .bd:before{content: ""; display: inline-flex; width: 4px; height: 100%; margin-right: 6px; background-color: #fbb900} */
+/* li:before{font-family: "Font Awesome 6 Free"; content: "\f1ad"; position:absolute; display: none; vertical-align: middle; font-weight: 900;font-size: 14px; color: #fbb900; opacity: .8; top: 4px; left: 4px;} */
+
+
+.report-container .info .s .addr-container div{display: flex; align-items: center; padding-top: 4px}
+.report-container .info .s .addr-container div:not(.bd){margin-left: 10px;}
+.report-container .info .s .addr-container .raddr{font-size: 14px; color: #777}
+.report-container .info .s .addr-container .raddr:before{content: "도로명"; margin-right: 4px; padding: 2px; background-color: #ececec; font-size: 10px; color: #777}
+
+.report-container .info .p{width: 50%; display: flex; flex-direction: column; justify-content: center; font-size: 16px;}
+.report-container .info .p .price-container{display: flex; flex-direction: column; padding-right: 10px}
+.report-container .info .p .price-container .space{justify-content: space-between;}
+.report-container .info .p .price-container .space div:first-child{font-weight: 500;}
+/* .report-container .info .p .price-container .space div:last-child{padding-right: 10px;} */
+.report-container .info .p .price-container .space strong{padding-right: 4px}
+.report-container .info .p .price-container div{display: flex; align-items: center;}
+
+
+
+/* .report-container .info .p .price-container .sold-price div:first-child{font-weight: 500;} */
+.report-container .info .p .price-container .rise-rate{padding-right: 4px; justify-content: end; font-size: 14px}
+.report-container .info .p .price-container .rise-rate i{position: relative; top: 2px; opacity: 1;}
+.report-container .info .p .price-container .rise-rate span{padding-left: 6px}
+
+.report-container .info .p .price-container .rise-rate.undefined{color: #bbb}
+.report-container .info .p .price-container .rise-rate.undefined i{opacity: 0;}
+.report-container .info .p .price-container .rise-rate.plus{color: #ff4400}
+
+.report-container .info .p .price-container .rise-rate.minus{color: #3182f7}
+.report-container .info .p .price-container .rise-rate.minus i{transform: rotate(180deg); top: -2px;}
+
+/* .report-container .info .p .price-container .calculation-price div:first-child .hint-ico{position: relative; display: flex; padding: 0 4px; color: #3182f7; cursor: pointer;}
+.report-container .info .p .price-container .calculation-price div:first-child .hint-ico:before{content: attr(data-tooltip); position: absolute; top: 18px; background-color: rgba(0,0,0,.5); color: #fff; padding: 10px 7px; border-radius: 4px; width: 200px; opacity: 0; transition: all 0.5s linear;}
+.report-container .info .p .price-container .calculation-price div:first-child .hint-ico:hover:before{opacity: 1;} */
+.report-container .hint-ico{position: relative; display: flex; padding: 0 4px; color: #3182f7; cursor: pointer;}
+.report-container .hint-ico:before{content: attr(data-tooltip); display: none; position: absolute; top: 0; left: 24px; background-color: rgba(0,0,0,.3); color: #fff; padding: 10px 7px; border-radius: 4px; width: 200px; opacity: 0; font-size: 12px}
+.report-container .hint-ico:hover:before{display: flex; opacity: 1;}
+
+/* .report-container .info .p .price-container .sold-price:before{content: "거래금액"; font-size: 12px; border-radius: 6px; padding: 4px; margin-right: 10px; color: #ff4400; border: 1px solid #ff4400}
+.report-container .info .p .price-container .calculation-price:before{content: "추정금액"; font-size: 12px; border-radius: 6px; padding: 4px; margin-right: 10px; color: #3182f7; border: 1px solid #3182f7}
+.report-container .info .p .expert-comment:before{content: "Comment"; font-size: 12px; border-radius: 6px; padding: 4px; margin-right: 10px; color: #000; border: 1px solid #777} */
+
+.report-container .m{display: flex; flex-direction: column;}
+.report-container .m ul{display: flex; margin-bottom: 20px; justify-content: space-around; width: 100%; text-align: center; }
+.report-container .m ul li{width: 120px; display: flex; padding: 4px; flex-direction: column; height: 60px; border: 1px solid #bbb; border-radius: 4px}
+.report-container .m ul li .li-div{display: flex; flex-direction: column;}
+.report-container .m ul li h4{display: flex; justify-content: center; font-weight: 500; justify-content: center; color: #bbb; font-size: 14px; padding-bottom: 6px }
+.report-container .m ul li span{display: flex; height: 100%; justify-content: center; align-items: center; color: #000}
+
+
+/* comment */
+.report-container .depth-container{display: flex; flex-direction: column; color: #000}
+.report-container .depth-container .depth-sub{display: flex; margin: 10px 0 16px 0; font-weight: 500; font-size: 20px}
+.report-container .depth-container .depth-sub:before{content: ""; display: inline-flex; width: 4px; height: 28px; margin-right: 6px; background-color: #fbb900}
+.report-container .depth-container .depth-sub i{display: flex; align-items: center; font-size: 16px; position: relative; top: 2px; color: #3182f7}
+
+.report-container .depth-container .depth-content{margin-left: 10px}
+/* .report-container .depth-container .depth-content.txt-area{cursor: pointer} */
+.report-container .depth-container .depth-content.txt-area textarea{border: none; overflow: hidden; padding: 12px; box-sizing: border-box; resize: none; min-height: 50px; max-height: 200px; font-size: 14px; text-indent: 8px; background-color: rgba(77,77,77,.1)}
+.report-container .depth-container .depth-content.txt-area.on textarea{border: 1px solid rgb(77,77,77,.2); background-color: #fff}
+.report-container .depth-container .depth-content i:last-child{float: right}
+
+/* example */
+
+.report-container .example-map{display: flex; flex-direction: column; width: 100%; margin-bottom: 20px; }
+.report-container .example-map .map-container{display: flex; height: 364px; background-color: #ececec; margin-bottom: 6px}
+.report-container .example-map .map-container .report-marker{display: flex; width: 24px; height: 24px; justify-content: center; align-items: center; background-color: #fff; border-radius: 12px; box-shadow: 0 0 4px 0 rgb(77,77,77,.5); color: #fbb900}
+.report-container .example-map .map-link{display: flex; align-items: center; justify-content: end}
+.report-container .example-map .map-link button{display: flex; align-items: center; font-size: 14px; background-color: transparent; border-bottom: 1px solid #3182f7; color: #3182f7; cursor: pointer}
+.report-container .example-map .map-link button i{padding-left: 10px}
+
+.report-container .example-list{margin-bottom: 20px}
+.report-container .example-list table{border-collapse: collapse; text-align: center;}
+.report-container .example-list table .row{height: 46px;}
+.report-container .example-list table .head{border-bottom: 2px ridge #bbb}
+.report-container .example-list table .head th{color: #000}
+.report-container .example-list table .head td{padding-top: 4px; font-size: 14px}
+.report-container .example-list table .head td span{font-weight: 500;}
+/* .report-container .example-list table .head .ex-list-this{color: #fbb900} */
+.report-container .example-list table th, td{border: 1px solid #bbb; width: 16%; vertical-align: middle;}
+.report-container .example-list table td:hover{border-color: transparent; box-shadow: 0 0 12px -2px #8c8c8c;}
+.report-container .example-list table th{padding: 6px 0; font-weight: 500; font-size: 14px; color: #bbb}
+.report-container .example-list table input{border: none; text-align: center; height: 100%; color: #000; font-size: 12px; border-radius: 0; background-color: transparent;}
+
+.report-container .example-graph{position: relative; display: flex; width: 100%}
+.report-container .example-graph .area{position:relative; display: flex; width: 50%; height: 364px;}
+.report-container .example-graph .area:first-child{border-right: 1px dashed #bbb}
+.report-container .example-graph .area #re-chart-sales{width: 100%; padding-right: 6px;}
+.report-container .example-graph .area #re-chart-gongsi{width: 100%; padding-left: 6px;}
+
+
+.report-container .footer{width: 100%; display: flex; justify-content: center; height: 60px; align-items: center; background-color: transparent; color: #777; font-weight: 500; font-size: 12px}
+
+.layer .page-top{position: fixed;  transform: translate(-50%, 0); left: calc(50% - 4px); bottom: 40px; visibility: hidden; z-index: 11; opacity: 0; transition: all .5s;}
+.layer .page-top.on{visibility: visible; opacity: .8; transition: all .5s;}
+.layer .page-top button{display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; font-size: 24px; border-radius: 25px; box-shadow: 0 0 4px 0 rgb(77 77 77 / 50%); background-color: #fff; color: #000; cursor: pointer;}
+

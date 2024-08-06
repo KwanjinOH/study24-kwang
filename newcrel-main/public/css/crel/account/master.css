@@ -1,0 +1,20 @@
+html, body, .container, .content{width: 100%; height: 100%}
+button{cursor: pointer;}
+.hide{display: none !important}
+.container{overflow-y: auto;}
+.container .content{background-color: #f3f5ff}
+header, main, footer{display: flex; justify-content: center; align-items: center;}
+header{height: 160px;}
+main{min-height: calc(100% - 300px);}
+main .acc-warp{position: relative; width: 320px; padding: 40px; border-radius: 10px; background-color: #fff; box-shadow: 0 0 1px 0 rgb(77 77 77 / 50%);}
+main .acc-warp .acc-h{text-align: center; color: #000;}
+main .acc-warp .acc{margin-top: 14px}
+main .acc-warp .acc:last-child{margin-top: 40px;}
+main .acc-warp .btn button{border: 0; background-color: #fbb900; width: 100%; color: #fff; height: 40px; font-size: 14px;}
+
+/* .error-msg div{display: flex; align-items: center; color: #ed4545}
+.error-msg div i{margin: 4px}
+.error-msg div span{font-size: 12px} */
+
+footer{height: 140px; font-size: 14px}
+

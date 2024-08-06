@@ -1,0 +1,17 @@
+.acc.trm ul{color: #000; font-size: 14px}
+.acc.trm ul li:nth-child(n+1){margin-top: 14px}
+.acc.trm ul li input{position: absolute; left: -1000%}
+.acc.trm ul li input + label:before{content: ""; position: relative; top: 3px; display: inline-block; margin: 0 10px 0 0; width: 18px; height: 18px; border: 1px solid #bbb; border-radius: 3px; transition: all .2s;}
+.acc.trm ul li input:checked + label:before{ background-color: #fbb900; border-color: #fbb900}
+.acc.trm ul li input + label:after{content: ""; position: absolute; left: 0; top: 0; background: url(/img/web/check.png) no-repeat center; width: 20px; height: 18px; background-size: 0 auto; transition: all .1s .2s}
+.acc.trm ul li input:checked + label:after{background-size: 18px auto;}
+.acc.trm ul li label{position: relative;}
+.acc.trm ul li .t-chk-all span{font-weight: 500; color: #000}
+.acc.trm ul li .t-all{font-weight: 500; color: #000}
+.acc.trm ul li a{text-decoration: underline;}
+
+/* #ed4545 오렌지색 */
+/* .acc.trm span:first-child{font-weight: 500; color: #000} */
+
+.acc.trm span.es{color: #fbb900}
+.acc.trm span.un{color: #777}

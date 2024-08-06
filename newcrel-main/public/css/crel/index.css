@@ -1,0 +1,171 @@
+.top-header {position: relative; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; padding:0 26px; margin: 0 auto; width: 100%; height: 60px; border-bottom: 1px solid #dcdcdc; box-shadow: 0 0 4px 0 rgb(77 77 77 / 20%); background-color: #fff; z-index: 10;}
+#nmap {position:absolute; top:0; left:0; right:0; width:100%; height: 100%}
+.top-header .searchs {position: relative; display: flex;}
+.top-header .logo {margin-right: 20px;}
+.top-header .logo a img {height: 32px; width: 37px}
+#addr-search-box {flex: 0 0 auto; padding: 0 40px 0 12px; height: 32px; width: 258px; background: url(/img/web/search.svg) right 12px center / 12px no-repeat #fff; font-size: 14px; border: 1px solid #bbb; /* transition: width .2s ease */};
+#addr-search-box::placeholder {font-size: 14px}
+#addr-search-box:focus {position:absolute; border-radius: 0; color: #000; width: 316px; border: 1px solid #000; transition: width .2s ease;}
+.top-header .searchs .search-list{position: absolute; display: none; top: 40px; width: 368px; border: 1px solid #777; background-color: #fff}
+.top-header .searchs .search-list.on{display: block}
+.top-header .searchs .search-list ul{ max-height: 340px; overflow-y: auto; overflow-x: hidden;}
+.top-header .searchs .search-list ul.places b{color: #fbb900}
+.top-header .searchs .search-list ul::-webkit-scrollbar{width: 10px}
+.top-header .searchs .search-list ul::-webkit-scrollbar-thumb{width: 6px; background-color: #bbb; background-clip: padding-box; border: 3px solid transparent; border-radius: 5px}
+.top-header .searchs .search-list ul::-webkit-scrollbar-track{background-color: #fff}
+
+.top-header .searchs .search-list ul li{position: relative; display: flex; padding: 10px 6px; justify-content: space-between;}
+.top-header .searchs .search-list ul li strong{font-weight: 500;}
+.top-header .searchs .search-list ul:not(.history) li:after{content: ""; width: 96%; height: 1px; position: absolute; bottom: 0; background-color: #ececec;}
+.top-header .searchs .search-list ul.historys{display: none; border: 1px solid #777; color: #000}
+.top-header .searchs .search-list ul.historys.on{display: block}
+.top-header .searchs .search-list ul.historys li:not(.subject){padding: 8px 10px}
+.top-header .searchs .search-list ul.historys li .del{display: flex; width: 40px; height: 20px;}
+.top-header .searchs .search-list ul.historys li .del a{display: flex; width: 100%; justify-content: center; align-items: center; font-size: 14px}
+.top-header .searchs .search-list ul.historys li:last-child{border-bottom: 1px solid #777;}
+.top-header .searchs .search-list ul li:not(.subject):hover{background-color: #F1F5FC; color: #000; cursor: pointer;}
+.top-header .searchs .search-list ul li div:first-child{display: flex; flex-direction: column; justify-content: center;}
+.top-header .searchs .search-list ul li div:first-child span{display: flex; align-items: center; height: 20px; white-space: nowrap; font-size: 12px}
+
+
+.top-header .btns{font-size: 14px}
+.top-header .btns ul{display: flex; flex-direction: row; flex-wrap: wrap;}
+.top-header .btns ul li{margin-right: 20px}
+.top-header .btns ul li:last-child{margin-right: 0}
+.top-header .btns ul li a{display: flex; align-items: center; height: 60px; color: rgba(0,0,0,1);
+     background: linear-gradient(to right, #84f52e, #fbb900, #bbb);
+     background-clip: text; -webkit-background-clip: text;
+     background-size: 200% 200%;
+     animation: ani 2s ease-in infinite;
+     transition: color .2s ease-in;
+     font-weight: 600}
+.top-header .btns ul li a:hover{color: rgba(0,0,0,0);}
+
+@keyframes ani{
+    0%{background-position: left}
+    50%{background-position: right}
+    100%{background-position: left}
+}
+
+.tilewarp{position: fixed; height: calc(100% - 60px); right: 20px; color: #000; z-index: 9;}
+.tilewarp.side-on{right: 340px;}
+.tilemap.top{position: relative; top: 40px;}
+.tilemap.top ul li:before{font-family: "Font Awesome 6 Free"; content: "\f00c"; position:absolute; display: none; vertical-align: middle; font-weight: 900;font-size: 14px; color: #fbb900; opacity: .8; top: 4px; left: 4px;}
+.tilemap.top ul li.pic:before{display: inline-block}
+.tilemap.bottom{position: absolute; bottom: 20px}
+.tilemap ul{position: relative; display: flex; flex-direction: column; background-color: #fff; box-shadow: 0 0 4px 0 rgba(77,77,77,.5); border-radius: 6px; margin-bottom: 20px}
+.tilemap ul li{display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; cursor: pointer;}
+/* .tilemap ul li.pic{color: #fbb900; font-weight: 500} */
+.tilemap ul li:after{position: absolute; content: ""; height: 50px; width: 30px; border-bottom: 1px solid #ececec}
+.tilemap ul li:last-child:after{content: none}
+
+
+
+.tilemap ul .babge{display: none; font-size: 18px}
+.tilemap .location li{ font-size: 24px;/*background: url(/img/web/aim.png) no-repeat center / 50%*/}
+.tilemap .zoom li{font-size: 18px}
+.tilemap li:active{color: #fbb900}
+
+/* 870px */
+@media (max-height: 870px){
+    .tilemap.top{max-width: 50px}
+    .tilemap.top ul{display: inline-flex; float: right; flex-direction: row; }
+    .tilemap.top ul .babge{display: flex}
+    /* .tilemap.top ul .babge:active{color: #fbb900} */
+    .tilemap.top ul li:not(.babge){display: none;}
+    .tilemap.top ul li:after{height: 30px; width: 50px; border-bottom: none; border-right: 1px solid #ececec;}
+    .tilemap.top ul li:nth-last-child(2):after{border-right: 1px solid #bbb;}
+    .tilemap.top ul.op li:not(.babge){display: flex;}
+}
+
+
+/* marker css */
+.ndot {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  display: block; width: auto; height: auto; box-shadow: 0 2px 10px 0 rgb(77 77 77 / 50%); background-color: #fff; padding: 6px; border-radius: 4px;  z-index: 5; cursor: pointer}
+.dcontainer{display: flex; flex-direction: column; text-align: center; min-width: 60px;}
+
+/* subject background-color list
+    1. #fbb900ba
+    2. rgba(251,185,0,.4)
+    3. rgba(187,187,187,.2)
+    4. #ececec
+*/
+
+.dcontainer .subject{font-size: 12px; border-radius: 2px; background-color: rgba(187,187,187,.2); padding: 2px 0; font-weight: 400; color: #ff6a00;}
+.dcontainer .sold-price{padding: 2px 0; font-size: 12px; font-weight: 500; color: #392f31}
+.dcontainer .unit-price{font-size: 10px; color: #777}
+.dcontainer .compare-cnt{display: none;}
+.dcontainer .compare-cnt.on{display: flex;  justify-content: center; align-items: center; width: 30px; height: 30px; background-color: #3182f7; position: absolute; top: -16px; left: -16px; border-radius: 50%; color: #fff; box-shadow: 0 0 10px 0 #3182f7; opacity: .8}
+
+
+.ndot:after{content: ""; position: absolute; margin-left: -2px; right: 0; left: 50%; bottom: -3px; width: 5px; height: 5px; background-color: #fff; transform: rotate(45deg)}
+.ndot.pic{animation: picani .3s linear 0s infinite alternate; margin-top: 0}
+/* 0504 over add */
+.ndot.over{margin-top: -10px}
+@keyframes picani {
+    0% {margin-top: 0px;}
+    100% {margin-top: 10px;}
+}
+
+.map-compare{position: fixed; right: 140px; bottom: 40px; z-index: 9;}
+.map-compare.side-on{right: 460px;}
+.compare-button{background-color: #fff; border-radius: 50%;}
+
+.compare-button button{display: flex; justify-content: center; align-items: center; border-radius: 50%; cursor: pointer;}
+.compare-button button:hover{color: #3182f7}
+.compare-button .parent-warp{ width: 70px; height: 70px;  box-shadow: 0 0 4px 0 rgb(77 77 77 / 50%); font-size: 30px;
+    background: linear-gradient(to right, #bcd3f3, #3182f7, #bbb);
+    background-clip: text; -webkit-background-clip: text;
+    background-size: 200% 200%;
+    animation: ani 2s ease-in infinite;
+    color: transparent
+}
+
+.compare-button .parent-warp.on{background: none; color: #3182f7; box-shadow: 0 0 10px 0 #3182f7}
+/* .compare-button .parent-warp:hover{color: #fbb900} */
+.compare-button .sub-btn{position: absolute; width: 60px; height: 60px; background-color: #fff; box-shadow: 0 0 4px 0 rgb(77 77 77 / 50%); font-size: 20px; color: #bbb}
+.compare-button .sub-btn.on{color: #3182f7}
+.compare-button .select{left: -70px; top: 16%}
+.compare-button .down{left: -40px; bottom: 90%}
+.compare-button .down .total-compare-cnt{position: absolute; left: -12px; top: -6px; display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; border-radius: 50%; background-color: #3182f7; color: #fff; font-size: 10px}
+.compare-button .re{left: 30px; bottom: 106%}
+
+.compare-button .hidden{transform: scale(0)}
+.compare-button .hide{ animation: hide .4s ease-in-out; animation-fill-mode: forwards;}
+.compare-button .open{ animation: open .4s ease-in-out; animation-fill-mode: forwards;}
+
+.select-cursor{position: absolute; /* animation: open .5s linear 0s infinite alternate; animation-fill-mode: forwards; */ width: 20px; height: 20px; border-radius: 50%; z-index: 99; background-color: /*#3182f7;*/ rgba(49,130,247,.8); pointer-events: none; /* transition: all .3s ease-out; transition-property: border-radius; */}
+
+@keyframes hide{
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0)
+    }
+}
+@keyframes open{
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes selcectpointer{
+    0% {
+        opacity: .6;
+    }
+    70% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
