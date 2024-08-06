@@ -1,0 +1,12 @@
+.acc.ip{font-size: 14px}
+.acc.ip input{margin-top:10px; height: 40px; font-size: 14px;}
+.acc.ip input:focus{border: 1px solid #fbb900}
+.acc.ip input[type='number']::-webkit-outer-spin-button,
+.acc.ip input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+
+.acc.ip .cfm-auth .unit{display: flex; align-items: end}
+.acc.ip .cfm-auth .unit button{height: 40px; width: 80px; padding: 2px; margin-left: 6px; border-radius: 4px; font-weight: 500;}
+.acc.ip .cfm-auth .unit button.send{background-color: #fbb900; color: #fff}
+
+.acc.ip .unit-warp{margin-top: 14px}
+
